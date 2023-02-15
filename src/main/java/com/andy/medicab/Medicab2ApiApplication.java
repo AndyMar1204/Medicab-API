@@ -1,5 +1,6 @@
 package com.andy.medicab;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -21,6 +22,11 @@ public class Medicab2ApiApplication {
     public String home() {
 
         return "API MEDICAB v2.0.0";
+    }
+    @Autowired
+    public void check(){
+        System.err.println("Chekin err");
+        System.out.println("Check fonction");
     }
 
 }
