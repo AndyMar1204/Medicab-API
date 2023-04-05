@@ -1,4 +1,4 @@
-package com.andy.medicab.contoller;
+package com.andy.medicab.controller;
 
 import com.andy.medicab.model.Hopital;
 import com.andy.medicab.model.Position;

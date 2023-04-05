@@ -1,4 +1,4 @@
-package com.andy.medicab.contoller;
+package com.andy.medicab.controller;
 
 import com.andy.medicab.model.Account;
 import com.andy.medicab.model.Driver;
@@ -9,10 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import static com.andy.medicab.contoller.Utils.*;
+import java.util.List;
+
+import static com.andy.medicab.controller.Utils.*;
 
 /**
  * @author Ir Andy
@@ -116,4 +117,14 @@ public class AccountController {
         return buildErrorMessage(e.getMessage());
       }
   }
+  @GetMapping(path = "findAll")
+    public ResponseEntity<List<Account>> findAll(){
+        try {
+            return new ResponseEntity<>(accountservice.findAll(),HttpStatus.OK);
+        }catch (Exception e){
+            e.printStackTrace();
+            return buildErrorMessage(e.getMessage());
+        }
+  }
+
 }

@@ -40,7 +40,7 @@ public class UserService implements GenericService<User,Long> {
         try {
             user = dao.findById(id).get();
         }catch (Exception ex){
-
+            ex.printStackTrace();
         }
 
         return user;
