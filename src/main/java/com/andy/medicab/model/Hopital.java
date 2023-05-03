@@ -75,8 +75,8 @@ public class Hopital extends Account {
     
 
     public Hopital() {
-setHeureOuverture(LocalTime.of(0,00));
-setHeureFermeture(LocalTime.of(23,59));
+setHeureOuverture(LocalTime.of(0,00,00,000));
+setHeureFermeture(LocalTime.of(23,59,00,00));
     }
     public boolean checkOpen(){
         LocalDate today = LocalDate.now();
@@ -88,4 +88,5 @@ setHeureFermeture(LocalTime.of(23,59));
         }else
             return false;
     }
+
 }

@@ -2,6 +2,7 @@
 package com.andy.medicab.model;
 
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
@@ -18,6 +19,7 @@ import java.util.StringJoiner;
 @PrimaryKeyJoinColumn(name = "account_id")
 @ToString
 @Getter
+@Setter
 public class User extends Account {
 
     private String postnom;
